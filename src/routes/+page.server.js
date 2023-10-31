@@ -1,15 +1,11 @@
-import { error } from '@sveltejs/kit';
+import { readItems } from '@directus/sdk';
+import { directus } from '$lib/api';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-    const links = await fetch('https://jsonplaceholder.typicode.com/posts')
+    let links = await directus.request(readItems('Links'));
 
-    if (links.ok) {
-        return {
-            links: await links.json()
-        }
+    return {
+        links
     }
-
-    throw error(404, 'Not found');
-}
-
+};
