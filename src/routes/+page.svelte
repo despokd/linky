@@ -1,3 +1,11 @@
+<script>
+	export let data;
+</script>
+
 <ul>
-    <li><a href="/page/1">Page 1</a></li>
+    {#each data.links as link}
+        <li>
+            <a href={link.url}>{link.title}</a>
+        </li>
+    {/each}
 </ul>
