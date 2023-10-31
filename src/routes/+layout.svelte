@@ -1,6 +1,6 @@
 <script>
-	import Header from '$lib/components/header.svelte';
-	import Footer from '$lib/components/footer.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -21,6 +21,15 @@
 			font-size: 16px;
 			line-height: 1.5;
 		}
+
+        a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible {
+                text-decoration: underline;
+            }
+        }
 	}
 
 	:root {
