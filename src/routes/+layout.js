@@ -9,4 +9,4 @@ export const load = async () => {
     await waitLocale()
 }
 
-export const prerender = true;
+export const prerender = false;

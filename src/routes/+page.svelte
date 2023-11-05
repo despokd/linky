@@ -1,48 +1,20 @@
 <script>
 	import { _ } from 'svelte-i18n';
-	
+	import Link from '$lib/components/link.svelte';
+
 	export let data;
-	
+
 	let links = data.links;
 	links.sort((a, b) => a.sort - b.sort);
 </script>
 
 <svelte:head>
 	<title>{$_('common.title')}</title>
-	<meta name="description" content="{$_('common.description')}" />
+	<meta name="description" content={$_('common.description')} />
 </svelte:head>
 
-<ul>
+<ul class="mx-auto w-full max-w-sm">
 	{#each links as link}
-		<li>
-			<a href={link.url}>{link.name}</a>
-		</li>
+		<li><Link {...link} /></li>
 	{/each}
 </ul>
-
-<style lang="scss">
-	ul {
-		list-style: none;
-        padding: 0;
-	}
-
-	li {
-		margin-bottom: 1em;
-	}
-
-	a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 3em;
-		background-color: transparent;
-		border-radius: 0.5em;
-        border: 1px solid transparentize(black, .5);
-
-		&:hover,
-		&:focus-visible {
-			background-color: transparentize(black, .5);
-			text-decoration: none;
-		}
-	}
-</style>

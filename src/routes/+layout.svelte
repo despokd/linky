@@ -1,4 +1,5 @@
 <script>
+	import '../app.postcss';
 	import { _ } from 'svelte-i18n';
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
@@ -6,41 +7,13 @@
 
 <svelte:head>
 	<title>{$_('common.title')}</title>
-	<meta name="description" content="{$_('common.description')}" />
+	<meta name="description" content={$_('common.description')} />
 </svelte:head>
 
-<div>
-	<Header />
-	<main><slot /></main>
-	<Footer />
-</div>
+<Header />
 
-<style lang="scss">
-	:global {
-		body {
-			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-				Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-			font-size: 16px;
-			line-height: 1.5;
-		}
+<main class="w-full max-w-7xl mx-auto">
+	<slot />
+</main>
 
-        a {
-            text-decoration: none;
-
-            &:hover,
-            &:focus-visible {
-                text-decoration: underline;
-            }
-        }
-	}
-
-	:root {
-		color-scheme: light dark;
-	}
-
-	div {
-		max-width: 960px;
-		margin: 0 auto;
-		padding: 2em;
-	}
-</style>
+<Footer />
