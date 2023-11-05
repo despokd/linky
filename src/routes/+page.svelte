@@ -1,9 +1,12 @@
 <script>
 	export let data;
+	
+	let links = data.links;
+	links.sort((a, b) => a.sort - b.sort);
 </script>
 
 <ul>
-	{#each data.links as link}
+	{#each links as link}
 		<li>
 			<a href={link.url}>{link.name}</a>
 		</li>
