@@ -1,9 +1,16 @@
 <script>
+	import { _ } from 'svelte-i18n';
+	
 	export let data;
 	
 	let links = data.links;
 	links.sort((a, b) => a.sort - b.sort);
 </script>
+
+<svelte:head>
+	<title>{$_('common.title')}</title>
+	<meta name="description" content="{$_('common.description')}" />
+</svelte:head>
 
 <ul>
 	{#each links as link}

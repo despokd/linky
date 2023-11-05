@@ -1,0 +1,13 @@
+{
+    "common": {
+        "title": "Linky",
+        "description": "Kilian Domaratius`s social media reference landing page",
+        "repository": "Git Repository"
+    },
+    "pages": {
+        "imprint": {
+            "title": "Imprint",
+            "description": "Imprint"
+        }
+    }
+}

@@ -28,6 +28,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@directus/sdk": "^13.0.1"
+		"@directus/sdk": "^13.0.1",
+		"svelte-i18n": "^4.0.0"
 	}
 }

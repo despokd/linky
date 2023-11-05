@@ -1,4 +1,5 @@
 <script>
+	import { _ } from 'svelte-i18n';
 	import { page } from '$app/stores';
 </script>
 
@@ -7,7 +8,7 @@
 		<ul>
 			<li>
 				<a href="/" class="logo"
-					>{#if $page.route.id === '/'}<h1>Linky</h1>{:else}Linky{/if}</a
+					>{#if $page.route.id === '/'}<h1>{$_('common.title')}</h1>{:else}{$_('common.title')}{/if}</a
 				>
 			</li>
 		</ul>
