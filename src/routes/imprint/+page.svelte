@@ -1,8 +1,10 @@
 <script>
 	import { _ } from 'svelte-i18n';
+	import { getTranslation } from '$lib/directus';
 
 	export let data;
-	let imprint = data.global[0].imprint;
+	
+	let imprint = getTranslation(data.global).imprint;
 </script>
 
 <svelte:head>
