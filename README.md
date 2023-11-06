@@ -5,7 +5,7 @@ Dynamic link landing page
 ## Developing
 
 ```bash
-npm install
+pnpm install --no-frozen-lockfile
 npm run dev
 ```
 
