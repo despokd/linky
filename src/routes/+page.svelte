@@ -19,7 +19,7 @@
 		<img src={data.me.image + '?s=200'} alt={data.me.name} class="mx-auto rounded-full w-36 h-36 m-4" />
 	{/if}
 	<h1 class="text-center text-2xl font-semibold mx-1">{data.me.name}</h1>
-	<p class="text-center p-4 mb-4">{getTranslation(data.meTranslations).description_short}</p>
+	<p class="text-center p-4 mb-4">{getTranslation(data.me.translations).description_short}</p>
 	<ul>
 		{#each links as link}
 			<li><Link name={link.name} url={link.url} /></li>
