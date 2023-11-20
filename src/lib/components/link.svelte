@@ -12,6 +12,10 @@
 		case 'kdomaratius.de':
 			iconClass = 'fa-regular fa-user';
 			break;
+		case 'Donations':
+		case 'buymeacoffee':
+			iconClass = 'fa-regular fa-heart';
+			break;
 	}
 </script>
 
