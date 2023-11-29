@@ -8,6 +8,10 @@
         "imprint": {
             "title": "Impressum",
             "description": "Impressum"
+        },
+        "privacy": {
+            "title": "Datenschutz",
+            "description": "Datenschutzerklärung"
         }
     }
 }

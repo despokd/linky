@@ -8,6 +8,10 @@
         "imprint": {
             "title": "Imprint",
             "description": "Imprint"
+        },
+        "privacy": {
+            "title": "Privacy",
+            "description": "Privacy policy"
         }
     }
 }
