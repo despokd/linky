@@ -20,13 +20,15 @@ export function getTranslation(translations) {
     languagesToCheck.filter((language) => language && language !== '');
 
     // search for exact match (ISO 639-2, 'en-GB' or 'de-DE')
-    languagesToCheck.every((language) => {
-        foundTranslation = translations.find((/** @type {{ languages_code: string; }} */ translation) => translation.languages_code === language) ?? foundTranslation;
-        return !foundTranslation;
-    });
+    if (!foundTranslation || Object.keys(foundTranslation).length === 0) {
+        languagesToCheck.every((language) => {
+            foundTranslation = translations.find((/** @type {{ languages_code: string; }} */ translation) => translation.languages_code === language) ?? foundTranslation;
+            return !foundTranslation;
+        });
+    }
 
     // search for similar match (ISO 639-1, 'en' or 'de')
-    if (!foundTranslation) {
+    if (!foundTranslation || Object.keys(foundTranslation).length === 0) {
         languagesToCheck.every((language) => {
             foundTranslation = translations.find((/** @type {{ languages_code: string; }} */ translation) => translation.languages_code.slice(0, 2) === language.slice(0, 2))
             return !foundTranslation;
@@ -34,7 +36,7 @@ export function getTranslation(translations) {
     }
 
     // use first translation
-    if (!foundTranslation) {
+    if (!foundTranslation || Object.keys(foundTranslation).length === 0) {
         foundTranslation = translations[0] ?? {};
     }
 
