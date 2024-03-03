@@ -11,6 +11,10 @@
 <svelte:head>
 	<title>{$_('common.title')}</title>
 	<meta name="description" content={$_('common.description')} />
+	<meta property="twitter:title" content="{$_('common.title')}" />
+	<meta property="twitter:description" content={$_('common.description')} />
+	<meta property="og:title" content="{$_('common.title')}" />
+	<meta property="og:description" content="{$_('common.description')}" />
 </svelte:head>
 
 <Header />

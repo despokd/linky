@@ -12,6 +12,16 @@
 <svelte:head>
 	<title>{$_('common.title')}</title>
 	<meta name="description" content={$_('common.description')} />
+	<meta property="twitter:title" content="{$_('common.title')}" />
+	<meta property="twitter:description" content={$_('common.description')} />
+	<meta property="og:title" content="{$_('common.title')}" />
+	<meta property="og:description" content="{$_('common.description')}" />
+	<meta property="og:url" content="https://linky.kdomaratius.de" />
+	{#if data.me.image}
+		<meta property="twitter:image" content="{data.me.image}" />
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="og:image" content="{data.me.image}" />
+	{/if}
 </svelte:head>
 
 <section class="mx-auto w-full max-w-sm">
