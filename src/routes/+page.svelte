@@ -19,7 +19,7 @@
 	<meta property="og:url" content="https://linky.kdomaratius.de" />
 	{#if data.me.image}
 		<meta property="twitter:image" content="{data.me.image}?s=800&d=identicon" />
-		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:card" content="summary">
 		<meta property="og:image" content="{data.me.image}?s=800&d=identicon" />
 	{/if}
 </svelte:head>
