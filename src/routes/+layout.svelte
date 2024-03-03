@@ -19,8 +19,10 @@
 
 <Header />
 
-<main class="w-full max-w-7xl mx-auto px-4">
-	<slot />
+<main class="w-full max-w-7xl mx-auto">
+	<div class="px-4">
+		<slot />
+	</div>
 </main>
 
 <Footer />
