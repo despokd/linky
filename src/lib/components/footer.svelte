@@ -3,7 +3,7 @@
 	import { Footer, FooterLinkGroup, FooterLink } from 'flowbite-svelte';
 </script>
 
-<Footer class="flex items-center justify-center px-4 text-center mt-4">
+<Footer class="flex items-center justify-center px-4 text-center my-4">
 	<FooterLinkGroup
 		ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
 	>
