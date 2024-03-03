@@ -3,6 +3,9 @@
 	import { _ } from 'svelte-i18n';
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+	injectSpeedInsights();
 </script>
 
 <svelte:head>
